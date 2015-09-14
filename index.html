@@ -8,9 +8,13 @@
 
   <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
   <link rel="stylesheet" href="stylesheets/github-dark.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css" /> 
+  <link rel="stylesheet" href="stylesheets/custom.css">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script type="text/javascript" src="javascripts/script.js"></script>
-
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular.min.js"></script>
+  <script type="text/javascript" src="javascripts/data.js"></script>
+  <script type="text/javascript" src="javascripts/content.js"></script>
   <title>Scott Munro</title>
   <meta name="description" content="">
 
@@ -18,38 +22,53 @@
 
 </head>
 
-<body>
+<body ng-app="ngHomepageApp">
 
   <div class="wrapper">
     <header>
       <h1 class="title">Scott Munro</h1>
     </header>
     <div id="container">
-      <p class="tagline"></p>
+      <p class="tagline">contact me @ <a href="mailto:scottnmunro@gmail.com">scottnmunro@gmail.com</a></p>
       <div id="main" role="main">
         <div class="download-bar">
         <div class="inner">
-          <a href="https://github.com/scottnm/Homepage/tarball/master" class="download-button tar"><span>Download</span></a>
-          <a href="https://github.com/scottnm/Homepage/zipball/master" class="download-button zip"><span>Download</span></a>
-          <a href="https://github.com/scottnm/Homepage" class="code">View Scott Munro on GitHub</a>
+          <!--<a href="https://github.com/scottnm/Homepage/tarball/master" class="download-button tar"><span>Download</span></a>
+          <a href="https://github.com/scottnm/Homepage/zipball/master" class="download-button zip"><span>Download</span></a>-->
+          <a href="https://github.com/scottnm/" class="code">View Scott Munro on GitHub</a>
         </div>
         <span class="blc"></span><span class="trc"></span>
         </div>
         <article class="markdown-body">
           <h3>
-<a id="welcome" class="anchor" href="#welcome" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome</h3>
-
-<p>I am an aspiring Software Engineer and full time Computer Science student at the University of Texas at Austin. Most of the projects' source listed on this resume can be found on my Github!</p>
-
-<h3>
-<a id="skills--interests" class="anchor" href="#skills--interests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Skills &amp; Interests</h3>
-
-<ul>
-<li>Web Development </li>
-<li>Game Development</li>
-<li>Object Oriented Programming</li>
-<li>Teaching</li>
-</ul>
+            <a id="welcome" class="anchor" href="#welcome" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome
+          </h3>
+          
+          <p>I am an aspiring Software Engineer and full time Computer Science student at the University of Texas at Austin. Most of the projects' source listed on this resume can be found on my Github.</p>
+          
+          <h3>
+          <a id="skills--interests" class="anchor" href="#skills--interests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Skills &amp; Interests</h3>
+          
+          <ul>
+          <li>Web Development </li>
+          <li>Game Development</li>
+          <li>Object Oriented Programming</li>
+          <li>Teaching</li>
+          </ul>
+          
+          <div id="projects-container" ng-controller="ProjectController">
+            <h3><a id="projects" class="anchor" href="#projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Projects</h3>
+            <div class="project-container" ng-repeat="project in projects">
+              <div class="project-title"><a href="{{project.src}}">{{project.title}}</a></div>
+              <div class="project-date">{{project.dates}}</div>
+              <div class="project-description">{{project.description}}</div>
+              <div class="project-tools">Tools: {{project.tools}}</div>
+              <div ng-if="project.videodemo" class="video-demo"><a target="_blank" href="{{project.videodemo}}"><button class="btn btn-success btn-darkgithub">Video Demo</button></a></div>
+              <div ng-if="project.liveapp" class="live-demo"><a target="_blank" href="{{project.liveapp}}"><button class="btn btn-success btn-darkgithub">Live App</button></a></div>
+            </div>
+          </div>
+              
+          </div>
         </article>
       </div>
     </div>

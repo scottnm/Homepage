@@ -1,0 +1,21 @@
+.project-container {
+	margin-bottom: 20px;
+}
+
+.project-title {
+	font-size: 18px;
+}
+
+.project-date {
+	font-style: italic;
+	color: #969896;	
+}
+
+.project-tools {
+	font-variant: small-caps;
+}
+
+.btn.btn-success.btn-darkgithub {
+	margin-top: 5px;
+	background-color: #7bcc72;
+}
