@@ -46,23 +46,39 @@
           
           <p>I am an aspiring Software Engineer and full time Computer Science student at the University of Texas at Austin. Most of the projects' source listed on this resume can be found on my Github.</p>
           
-          <h3>
-          <a id="skills--interests" class="anchor" href="#skills--interests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Skills &amp; Interests</h3>
-          
-          <ul>
-          <li>Web Development </li>
-          <li>Game Development</li>
-          <li>Object Oriented Programming</li>
-          <li>Teaching</li>
-          </ul>
+          <div id="interests-and-skills-container">
+	          <div>
+		          <h3>
+		          <a id="skills--interests" class="anchor" href="#skills--interests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interests</h3>
+		          
+		          <ul>
+		          <li>Web Development </li>
+		          <li>Game Development</li>
+		          <li>Object Oriented Programming</li>
+		          <li>Teaching</li>
+		          </ul>
+	          </div>
+
+	          <div>
+		          <h3>
+		          <a id="skills" class="anchor" href="#skills" aria-hidden="true"><span class="octicon octicon-link"></span></a>Skills</h3>
+		          
+		          <ul id="skills-list">
+		          <li><strong>Proficient</strong> Java (3+ years), Javascript (1+ years), HTML &amp; CSS (3+ years)</li>
+		          <li><strong>Comfortable</strong> Python (2+ years), Pygame (2+ years), C (1+ years), C++ (1+ years), AngularJS, KnockoutJS, Closure, Handlebars (1 year)</li>
+		          <li><strong>Exposure</strong> C#, Unity</li>
+		          </ul>
+	          </div>
+          </div>
           
           <div id="projects-container" ng-controller="ProjectController">
             <h3><a id="projects" class="anchor" href="#projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Projects</h3>
             <div class="project-container" ng-repeat="project in projects">
-              <div class="project-title"><a href="{{project.src}}">{{project.title}}</a></div>
+              <div class="project-title">{{project.title}}</div>
               <div class="project-date">{{project.dates}}</div>
               <div class="project-description">{{project.description}}</div>
               <div class="project-tools">Tools: {{project.tools}}</div>
+              <div ng-if="project.src" class="src-code"><a target="_blank" href="{{project.src}}"><button class="btn btn-success btn-darkgithub">Source</button></a></div>
               <div ng-if="project.videodemo" class="video-demo"><a target="_blank" href="{{project.videodemo}}"><button class="btn btn-success btn-darkgithub">Video Demo</button></a></div>
               <div ng-if="project.liveapp" class="live-demo"><a target="_blank" href="{{project.liveapp}}"><button class="btn btn-success btn-darkgithub">Live App</button></a></div>
             </div>
