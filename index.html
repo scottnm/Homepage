@@ -79,9 +79,12 @@
               <div class="project-date">{{project.dates}}</div>
               <div class="project-description">{{project.description}}</div>
               <div class="project-tools">Tools: {{project.tools}}</div>
-              <div ng-if="project.src" class="src-code"><a target="_blank" href="{{project.src}}"><button class="btn btn-success btn-darkgithub">Source</button></a></div>
-              <div ng-if="project.videodemo" class="video-demo"><a target="_blank" href="{{project.videodemo}}"><button class="btn btn-success btn-darkgithub">Video Demo</button></a></div>
-              <div ng-if="project.liveapp" class="live-demo"><a target="_blank" href="{{project.liveapp}}"><button class="btn btn-success btn-darkgithub">Live App</button></a></div>
+              <div class="project-button-bar">
+                <div ng-if="project.src" class="src-code"><a target="_blank" href="{{project.src}}"><button class="btn btn-success btn-darkgithub">Source</button></a></div>
+                <div ng-if="project.videodemo" class="video-demo"><a target="_blank" href="{{project.videodemo}}"><button class="btn btn-success btn-darkgithub">Video Demo</button></a></div>
+                <div ng-if="project.liveapp" class="live-demo"><a target="_blank" href="{{project.liveapp}}"><button class="btn btn-success btn-darkgithub">Live App</button></a></div>
+                <div ng-if="project.doc" class="documentation"><a target="_blank" href="{{project.doc}}"><button class="btn btn-success btn-darkgithub">Documentation</button></a></div>
+              </div>
             </div>
           </div>
               

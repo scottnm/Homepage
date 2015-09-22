@@ -94,6 +94,7 @@ var projectData = [
                            'network structures',
             'src': githubPrefix + 'Evolving-Boss-Battles.git',
             'tools': 'Python, Pygame',
-            'videodemo': 'https://www.youtube.com/playlist?list=PL32gaNsQmlxtmjOjnfAN15zOAn-oJbRHV'
+            'videodemo': 'https://www.youtube.com/playlist?list=PL32gaNsQmlxtmjOjnfAN15zOAn-oJbRHV',
+            'doc': 'files/evolving-boss-behavior-report.pdf'
         }
     ];

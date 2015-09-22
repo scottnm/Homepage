@@ -45,3 +45,15 @@
     margin-left: -30px;
 
 }
+
+.project-button-bar {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: -webkit-flex;     /* NEW - Chrome */
+	display: flex;  
+}
+
+.project-button-bar > div {
+	padding-right: 5px;
+}
