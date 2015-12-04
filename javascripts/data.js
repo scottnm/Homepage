@@ -4,6 +4,16 @@ var githubPrefix = 'https://github.com/scottnm/';
 
 var projectData = [
         {
+            'title': 'Torus Shader',
+            'dates': 'Fall 2015',
+            'description': 'Using glsl shaders, transformed a flat sheet into a torus' +
+                           ' and replicated phong shading, texture mapping, bump mapping, ' + 
+                           'and reflective surfaces.',
+            'src': '',
+            'tools': 'Glsl, C++',
+            'videodemo': 'https://www.youtube.com/watch?v=Z1-I8NzdXhw'
+        },
+        {
             'title': 'Labyrinth',
             'dates': 'Fall 2015',
             'description': 'During a 24 hour gamejam, built a game with procedurally ' +
